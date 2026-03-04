@@ -27,3 +27,13 @@ function prevSlide() {
         updateSlide();
     }
 }
+function startExperience() {
+    // hilangkan pembuka
+    document.getElementById("opening").style.display = "none";
+
+    // mulai lagu kalau ada
+    const audio = document.getElementById("lagu");
+    if (audio) {
+        audio.play();
+    }
+}
