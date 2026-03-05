@@ -31,9 +31,14 @@ function startExperience() {
     // hilangkan pembuka
     document.getElementById("opening").style.display = "none";
 
-    // mulai lagu kalau ada
+    // mulai lagu
     const audio = document.getElementById("lagu");
     if (audio) {
         audio.play();
     }
+
+    // pindah halaman setelah 1 detik
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 1000);
 }

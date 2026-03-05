@@ -373,7 +373,7 @@
 <div class="slide">
   <h1>More Than Words</h1>
   <p>
-    Lagu ini mungkin cuma 3 menit,<br>
+    aku emang belum terlalu kenal sama kamu,<br>
     tapi rasa terima kasihku ke kamu<br>
     nggak ada habisnya 💌
   </p>
@@ -394,8 +394,28 @@
   <button class="nav prev" onclick="prevSlide()">⬅</button>
   <button class="nav next" onclick="nextSlide()">➡</button>
 </div>
+
 <!-- Audio -->
-<audio id="lagu" src="thankyou.mp3" loop></audio>
-    <script src="main.js"></script>
-  </body>
+
+<audio id="lagu" loop>
+    <source src="thankyou.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.getElementById("btnNext").addEventListener("click", function() {
+    const lagu = document.getElementById("lagu");
+    lagu.play();
+
+    // Delay 1 detik biar lagu mulai dulu
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 1000);
+});
+</script>
+<script src="main.js"></script>
+<audio id="lagu" loop>
+    <source src="thankyou.mp3" type="audio/mpeg">
+</audio>
+</body>
 </html>
+ 
